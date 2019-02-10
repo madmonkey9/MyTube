@@ -1,20 +1,27 @@
-const express = require('express');
+// const express = require('express');
+import express from "express";
 const app = express();
 
 const PORT = 4000;
 
-function handleListening(){
-    console.log(`running on : localhost:${PORT}`);
+const handleListening = () => console.log(`running on : localhost:${PORT}`);
+
+const handleHome = (req, res) => res.send('Hello~ world~');
+
+const handleProfile = (req, res) => res.send("You are on my profile");
+
+const betweenMW = (req, res, next) => {
+    console.log("between");
+    next();
 }
 
-function handleHome(req, res){
-    res.send('Hello~');
-}
 
-function handleProfile(req, res){
-    res.send("You are on my profile");
-}
+//using individual
+// app.get("/", betweenMW, handleHome);
 
-app.listen(PORT, handleListening);
+//using globally
+app.use(betweenMW);
+
 app.get("/", handleHome);
 app.get("/profile", handleProfile);
+app.listen(PORT, handleListening);
