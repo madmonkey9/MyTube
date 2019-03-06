@@ -1,5 +1,4 @@
+@import "config/unset.scss";
 @import "config/_variable.scss";
-
-body {
-  background-color: $niceColor;
-}
+@import "main.scss";
+@import "partials/header.scss";
