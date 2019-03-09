@@ -1,0 +1,22 @@
+body {
+  height: 100%;
+  background-color: white;
+}
+main {
+  min-height: 50vh;
+  margin: 150px 50px 100px 50px;
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 20px;
+    justify-content: space-around;
+
+    .videoBlock {
+      text-align: center;
+      .videoBlock__thumbnail {
+        height: 100px;
+        width: 200px;
+      }
+    }
+  }
+}
