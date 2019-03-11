@@ -1,0 +1,21 @@
+.videos {
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  height: 100px;
+  grid-gap: 20px;
+  justify-content: space-around;
+
+  a {
+    &:first-child {
+      grid-column: span 3;
+    }
+  }
+  .videoBlock {
+    text-align: center;
+
+    .videoBlock__thumbnail {
+      height: 100px;
+      width: 200px;
+    }
+  }
+}

@@ -1,6 +1,12 @@
 @import "config/unset.scss";
 @import "config/_variable.scss";
+
 @import "main.scss";
+
+@import "pages/home.scss";
+@import "pages/videoDetail.scss";
+
 @import "partials/header.scss";
 @import "partials/join.scss";
 @import "partials/footer.scss";
+@import "partials/socialLogin.scss";

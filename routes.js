@@ -1,17 +1,17 @@
-//global
+// global
 const HOME = "/";
 const JOIN = "/join";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
 
-//Users
+// Users
 const USERS = "/users";
 const USERS_DETAIL = "/:id";
 const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
 
-//Videos
+// Videos
 const VIDEOS = "/video";
 const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id";
