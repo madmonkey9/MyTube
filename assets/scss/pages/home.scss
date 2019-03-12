@@ -1,13 +1,37 @@
 .videos {
   display: grid;
   grid-template-columns: repeat(6, 200px);
-  height: 100px;
-  grid-gap: 20px;
+  grid-template-rows: repeat(20, 100px);
+  grid-gap: 30px;
   justify-content: space-around;
 
   a {
-    &:first-child {
+    &:hover {
+      .videoBlock__thumbnail {
+        border: 1px $dark-gray solid;
+      }
+    }
+    &:first-child,
+    &:nth-child(2) {
       grid-column: span 3;
+      grid-row: span 3;
+
+      .videoBlock__thumbnail {
+        width: 600px;
+        height: 300px;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      .videoBlock__thumbnail {
+        width: 400px;
+        height: 200px;
+      }
     }
   }
   .videoBlock {
@@ -16,6 +40,16 @@
     .videoBlock__thumbnail {
       height: 100px;
       width: 200px;
+    }
+    .videoBlock__title,
+    .videoBlock__views {
+      text-align: left;
+      font-weight: 600;
+    }
+    .videoBlock__title {
+    }
+    .videoBlock__views {
+      color: $dark-gray;
     }
   }
 }
