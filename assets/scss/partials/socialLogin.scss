@@ -10,6 +10,9 @@
     border: none;
     color: white;
     font-size: 20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .social-login--github {
     background-color: #24292e;

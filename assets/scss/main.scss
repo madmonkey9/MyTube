@@ -3,6 +3,6 @@ body {
   background-color: white;
 }
 main {
-  min-height: 50vh;
+  height: minmax(100%, 50vh);
   margin: 100px 50px 100px 50px;
 }
